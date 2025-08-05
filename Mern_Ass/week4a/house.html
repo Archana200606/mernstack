@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mountain House Scene</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ccf2ff;
+    }
+
+    .scene {
+      width: 100%;
+      text-align: center;
+    }
+
+    .b {
+      display: inline-block;
+      width: 47%;
+      vertical-align: top;
+    }
+
+    .left-side {
+      text-align: right;
+    }
+
+    .right-side {
+      text-align: left;
+      margin-top: 100px;
+    }
+
+    .mountain-river-group {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    .mountain {
+      width: 0;
+      height: 0;
+      border-left: 80px solid transparent;
+      border-right: 80px solid transparent;
+      border-bottom: 120px solid #556b2f;
+      display: inline-block;
+      vertical-align: bottom;
+      margin: 0;
+    }
+
+    .river {
+      width: 60px;
+      height: 100px;
+      background-color: #3399ff;
+      display: block;
+      margin: -10px auto 0 auto;
+      border-radius: 0px;
+    }
+
+    .roof {
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 40px solid brown;
+      margin: 0 auto;
+    }
+
+    .walls {
+      width: 80px;
+      height: 60px;
+      background-color: #deb887;
+      margin: 0 auto;
+    }
+
+    .window-row {
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .window {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      border: 1px solid black;
+      margin: 0 10px;
+    }
+
+    .door {
+      width: 20px;
+      height: 30px;
+      background-color: #654321;
+      margin: 10px auto 0 auto;
+    }
+
+    .tree {
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: bottom;
+    }
+
+    .tree-top {
+      width: 0;
+      height: 0px;
+      border-left: 5cap solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 50px solid green;
+      margin: 0 auto;
+    }
+
+    .tree-trunk {
+      width: 30px;
+      height: 50px;
+      background-color: #8b4513;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scene">
+    <!-- Left side: Mountain - River - Mountain -->
+    <div class="b left-side">
+      <div class="mountain-river-group">
+        <div class="mountain"></div>
+        <div class="mountain"></div>
+        <div class="river"></div>
+      </div>
+    </div>
+
+    <!-- Right side: House with Tree beside -->
+    <div class="b right-side">
+      <div>
+        <div style="display: inline-block; vertical-align: bottom;">
+          <div class="roof"></div>
+          <div class="walls">
+            <div class="window-row">
+              <div class="window"></div>
+              <div class="window"></div>
+            </div>
+            <div class="door"></div>
+          </div>
+        </div>
+
+        <div class="tree">
+          <div class="tree-top"></div>
+          <div class="tree-trunk"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

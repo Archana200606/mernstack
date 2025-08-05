@@ -1,0 +1,19 @@
+
+  body {
+    text-align: center;
+    background-color: #91e1dd;
+    padding: 10px;
+    color: #1a1b15;
+    font-family: sans-serif;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+  h1 {
+    text-align: center;
+    background-color: rgb(71, 78, 215);
+    color: #555;
+    font-family: sans-serif;
+    margin-top: -10px;
+  }
+
