@@ -1,152 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mountain House Scene</title>
+  <meta charset="UTF-8">
+  <title>Scenic House with Trees, Mountains, and River</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #ccf2ff;
+      overflow: hidden;
+      background: skyblue;
     }
 
-    .scene {
+    .sky {
+      position: absolute;
       width: 100%;
-      text-align: center;
+      height: 100%;
+      background: linear-gradient(skyblue, #a3d9a5);
+      z-index: -3;
     }
 
-    .b {
-      display: inline-block;
-      width: 47%;
-      vertical-align: top;
+    .cloud {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: moveClouds 60s linear infinite;
     }
 
-    .left-side {
-      text-align: right;
+    
+
+    @keyframes moveClouds {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(120vw); }
     }
 
-    .right-side {
-      text-align: left;
-      margin-top: 100px;
+    .mountains {
+      position: absolute;
+      bottom: 150px;
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(#556b2f, #6b8e23);
+      clip-path: polygon(0 100%, 10% 30%, 20% 100%, 30% 40%, 40% 100%, 50% 30%, 60% 100%, 70% 35%, 80% 100%, 90% 25%, 100% 100%);
+      z-index: -2;
     }
 
-    .mountain-river-group {
-      display: inline-block;
-      vertical-align: bottom;
+    .ground {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background-color: #4caf50;
     }
 
-    .mountain {
-      width: 0;
-      height: 0;
-      border-left: 80px solid transparent;
-      border-right: 80px solid transparent;
-      border-bottom: 120px solid #556b2f;
-      display: inline-block;
-      vertical-align: bottom;
-      margin: 0;
-    }
-
-    .river {
-      width: 60px;
-      height: 100px;
-      background-color: #3399ff;
-      display: block;
-      margin: -10px auto 0 auto;
-      border-radius: 0px;
+    .house {
+      position: absolute;
+      bottom: 150px;
+      left: 40%;
+      width: 150px;
+      height: 120px;
+      background-color: #ffd700;
+      border: 3px solid #333;
+      z-index: 1;
     }
 
     .roof {
+      position: absolute;
+      bottom: 270px;
+      left: 39%;
       width: 0;
       height: 0;
-      border-left: 40px solid transparent;
-      border-right: 40px solid transparent;
-      border-bottom: 40px solid brown;
-      margin: 0 auto;
-    }
-
-    .walls {
-      width: 80px;
-      height: 60px;
-      background-color: #deb887;
-      margin: 0 auto;
-    }
-
-    .window-row {
-      text-align: center;
-      margin-top: 4px;
-    }
-
-    .window {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background-color: #ffffff;
-      border: 1px solid black;
-      margin: 0 10px;
+      border-left: 85px solid transparent;
+      border-right: 85px solid transparent;
+      border-bottom: 60px solid brown;
+      z-index: 2;
     }
 
     .door {
-      width: 20px;
-      height: 30px;
+      position: absolute;
+      bottom: 150px;
+      left: 46%;
+      width: 30px;
+      height: 60px;
       background-color: #654321;
-      margin: 10px auto 0 auto;
+      border: 2px solid #000;
+      z-index: 2;
     }
 
     .tree {
-      display: inline-block;
-      margin-left: 20px;
-      vertical-align: bottom;
-    }
-
-    .tree-top {
-      width: 0;
-      height: 0px;
-      border-left: 5cap solid transparent;
-      border-right: 50px solid transparent;
-      border-bottom: 50px solid green;
-      margin: 0 auto;
-    }
-
-    .tree-trunk {
+      position: absolute;
+      bottom: 150px;
       width: 30px;
-      height: 50px;
+      height: 80px;
       background-color: #8b4513;
-      margin: 0 auto;
+      z-index: 1;
     }
+
+    .tree::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -35px;
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .tree1 { left: 10%; }
+    .tree2 { left: 20%; }
+    .tree3 { right: 20%; }
+    .tree4 { right: 10%; }
+
+    
   </style>
 </head>
 <body>
 
-  <div class="scene">
-    <!-- Left side: Mountain - River - Mountain -->
-    <div class="b left-side">
-      <div class="mountain-river-group">
-        <div class="mountain"></div>
-        <div class="mountain"></div>
-        <div class="river"></div>
-      </div>
-    </div>
+  <div class="sky"></div>
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+  <div class="mountains"></div>
 
-    <!-- Right side: House with Tree beside -->
-    <div class="b right-side">
-      <div>
-        <div style="display: inline-block; vertical-align: bottom;">
-          <div class="roof"></div>
-          <div class="walls">
-            <div class="window-row">
-              <div class="window"></div>
-              <div class="window"></div>
-            </div>
-            <div class="door"></div>
-          </div>
-        </div>
+  <div class="roof"></div>
+  <div class="house"></div>
+  <div class="door"></div>
 
-        <div class="tree">
-          <div class="tree-top"></div>
-          <div class="tree-trunk"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="tree tree1"></div>
+  <div class="tree tree2"></div>
+  <div class="tree tree3"></div>
+  <div class="tree tree4"></div>
+
+  <div class="river"></div>
+  <div class="ground"></div>
 
 </body>
 </html>
